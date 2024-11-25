@@ -1,39 +1,101 @@
 .car-details-container {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+  background-color: #fafafa;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+.car-details-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 72%;
+  align-self: center;
+  margin: 0 auto;
+  margin-top: 5vh;
+  margin-bottom: 1vh;
 }
 
 .car-details-name {
-  font-size: 2rem;
+  font-size: 2.4em;
+  width: 10px;
   margin: 0;
-}
-
-.car-details-title {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-.car-details-image {
-  width: 300px;
-  height: auto;
+  color: #f4b61e;
 }
 
 .car-details-home-button {
-  background-color: #4caf50;
-  color: white;
+  background-color: rgb(0, 0, 0);
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 10px;
   cursor: pointer;
-  border-radius: 5px;
-  display: inline-flex;
-  align-items: center;
-  margin-top: 20px;
+  color: white;
 }
 
-.car-details-home-button:hover {
-  background-color: #45a049;
+.car-details-home-button .material-icons {
+  font-size: 1em;
+}
+
+.car-details-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3vw;
+}
+
+.car-details-image {
+  max-width: 1000px;
+  height: 55vh;
+  width: 100%;
+  border-radius: 40px;
+  border: 1px solid rgb(149, 149, 149);
+}
+
+.car-details-info {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.car-details-cv,
+.car-details-max-speed,
+.car-details-zero-cem {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  font-size: 1.6em;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  margin-top: 10px;
+  font-weight: bolder;
+  letter-spacing: 0;
+}
+
+.car-details-cv span,
+.car-details-max-speed span,
+.car-details-zero-cem span {
+  font-size: 0.6em;
+  color: #827f88;
+}
+
+.car-details-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.car-detail-image {
+  width: 380px;
+  height: 134px;
+  object-fit: cover;
+  border-radius: 40px;
+  border: 2px solid rgb(149, 149, 149);
+}
+
+.car-details-banner {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 80vh;
 }

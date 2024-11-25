@@ -13,15 +13,60 @@ const CarDetails = () => {
 
   return (
     <div className="car-details-container">
-      <h1 className="car-details-name">{car.name}</h1>
-      <p className="car-details-title">{car.title}</p>
-      <img className="car-details-image" src={car.carImage} alt={car.name} />
+      <div className="car-details-navbar">
+        <h1 className="car-details-name">{car.name}</h1>
+        <Link to="/">
+          <button className="car-details-home-button">
+            <span className="material-icons">Home</span>
+          </button>
+        </Link>
+      </div>
 
-      <Link to="/">
-        <button className="car-details-home-button">
-          <span className="material-icons">home</span>
-        </button>
-      </Link>
+      <div className="car-details-main">
+        <div className="car-details-left">
+          <img
+            className="car-details-image"
+            src={car.detailsFotos[0]}
+            alt="Car Detail"
+          />
+          <div className="car-details-info">
+            <p className="car-details-cv">
+              <span>Power (CV)</span> {car.cv}
+            </p>
+            <p className="car-details-max-speed">
+              <span>Max Speed</span> {car.maxSpeed}
+            </p>
+            <p className="car-details-zero-cem">
+              <span>0-100 km/h</span> {car.zeroCem}
+            </p>
+          </div>
+        </div>
+        <div className="car-details-right">
+          <div className="car-details-gallery">
+            <img
+              className="car-detail-image"
+              src={car.detailsFotos[1]}
+              alt="Car Detail 1"
+            />
+            <img
+              className="car-detail-image"
+              src={car.detailsFotos[2]}
+              alt="Car Detail 2"
+            />
+            <img
+              className="car-detail-image"
+              src={car.detailsFotos[3]}
+              alt="Car Detail 3"
+            />
+          </div>
+        </div>
+      </div>
+
+      <img
+        className="car-details-banner"
+        src={car.detailsFotos[4]}
+        alt="Car Banner"
+      />
     </div>
   );
 };
