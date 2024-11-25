@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { cars } from "./CarList";
 import "./CarDetails.css";
+import logo from "../assets/logo.png";
 
 const CarDetails = () => {
   const { id } = useParams();
@@ -62,11 +63,23 @@ const CarDetails = () => {
         </div>
       </div>
 
-      <img
-        className="car-details-banner"
-        src={car.detailsFotos[4]}
-        alt="Car Banner"
-      />
+      <div className="footer-details">
+        <img
+          className="car-details-banner"
+          src={car.detailsFotos[4]}
+          alt="Car Banner"
+        />
+        <div className="credits-banner">
+          <img
+            className="logo-banner"
+            src={logo}
+            alt="Logo Caiorossi.dev"
+          ></img>
+          <p className="text-banner">
+            Developed by <span className="caiorossidev">@Caiorossi.dev</span>
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

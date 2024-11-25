@@ -94,8 +94,39 @@
   border: 2px solid rgb(149, 149, 149);
 }
 
+.footer-details {
+  align-items: left;
+  display: flex;
+  flex-direction: row;
+  margin: 10vh 0;
+  position: relative;
+  align-items: end;
+  justify-content: space-between;
+}
+
 .car-details-banner {
-  width: 100%;
-  max-width: 1200px;
-  margin-top: 80vh;
+  width: 1000px;
+  max-height: 400px;
+  object-fit: cover;
+  clip-path: polygon(0 0, 83% 0, 100% 50%, 83% 100%, 0 100%);
+}
+
+.credits-banner {
+  padding: 1em;
+}
+
+.logo-banner {
+  height: 250px;
+  cursor: pointer;
+}
+
+.text-banner {
+  font-size: 1rem;
+  color: #383838;
+  font-family: "Poppins", sans-serif;
+}
+
+.caiorossidev {
+  font-weight: bold;
+  cursor: pointer;
 }

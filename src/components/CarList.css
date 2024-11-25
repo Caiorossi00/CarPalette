@@ -3,7 +3,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  overflow: hidden;
   letter-spacing: -2px;
   background-color: #fafafa;
 }
@@ -127,9 +126,8 @@ body {
 .background-animation {
   position: absolute;
   z-index: -1;
-  overflow: hidden;
-  height: 1020vh;
-  width: 100vw;
+  height: 178vh;
+  width: 90vw;
   top: 0;
   left: 0;
   background-image: url("https://assets.codepen.io/1468070/Star+Pattern+3.svg");
@@ -158,6 +156,10 @@ body {
 
 .footer-text a:hover {
   text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
 }
 
 @keyframes pan {
