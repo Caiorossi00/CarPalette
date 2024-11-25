@@ -1,14 +1,15 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import CarCard from "./CarCard";
-import "./CarList.css";
 import lambo from "../assets/lambo.png";
 import lamboLogo from "../assets/lambo-logo.png";
 import ferrari from "../assets/ferrari.png";
 import ferrariLogo from "../assets/ferari-logo.png";
 import porsche from "../assets/porsche.png";
 import porscheLogo from "../assets/porsche-logo.png";
+import "./CarList.css";
 
-const cars = [
+export const cars = [
   {
     id: 1,
     name: "Yellow Lamborghini",
@@ -19,6 +20,16 @@ const cars = [
     carImage: lambo,
     logoImage: lamboLogo,
     colorOptions: ["#FF0000", "#808080"],
+    cv: "750v",
+    maxSpeed: "350km/h",
+    zeroCem: "2.9s",
+    detailsFotos: [
+      "https://via.placeholder.com/600x400?text=Foto+Card",
+      "https://via.placeholder.com/600x400?text=Foto+Detail+1",
+      "https://via.placeholder.com/600x400?text=Foto+Detail+2",
+      "https://via.placeholder.com/600x400?text=Foto+Detail+3",
+      "https://via.placeholder.com/1200x600?text=Foto+Banner",
+    ],
   },
   {
     id: 2,
@@ -30,6 +41,10 @@ const cars = [
     carImage: ferrari,
     logoImage: ferrariLogo,
     colorOptions: ["#FFD700", "#808080"],
+    cv: "810cv",
+    maxSpeed: "352km/h",
+    zeroCem: "2.9s",
+    // detailsFotos: [fotoCard, fotoDetail1, fotoDetail2, fotoDetail3, fotoBanner],
   },
   {
     id: 3,
@@ -41,6 +56,10 @@ const cars = [
     carImage: porsche,
     logoImage: porscheLogo,
     colorOptions: ["#FFD700", "#FF0000"],
+    cv: "650cv",
+    maxSpeed: "330km/h",
+    zeroCem: "2.7s",
+    // detailsFotos: [fotoCard, fotoDetail1, fotoDetail2, fotoDetail3, fotoBanner],
   },
 ];
 
@@ -79,6 +98,9 @@ const CarList = () => {
       }}
     >
       <CarCard car={selectedCar} handleColorClick={handleColorClick} />
+      <Link to={`/car/${selectedCar.id}`}>
+        <button className="info-button">More Details</button>
+      </Link>
     </div>
   );
 };

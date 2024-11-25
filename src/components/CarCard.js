@@ -2,8 +2,8 @@ import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./CarList.css";
-import logo from "../assets/logo.png";
-import { FaInstagram } from "react-icons/fa"; // Biblioteca de ícones React
+import { FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const CarCard = ({ car, handleColorClick }) => {
   React.useEffect(() => {
@@ -41,13 +41,15 @@ const CarCard = ({ car, handleColorClick }) => {
           >
             {car.title}
           </p>
-          <button
-            className="info-button"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-          >
-            Lorem Ipsum
-          </button>
+          <Link to={`/car/${car.id}`}>
+            <button
+              className="info-button"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
+              More Details
+            </button>
+          </Link>
         </div>
         <div className="color-options">
           {car.colorOptions.map((color, index) => (

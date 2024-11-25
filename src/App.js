@@ -1,12 +1,14 @@
-import React from "react";
+import { Routes, Route } from "react-router-dom";
 import CarList from "./components/CarList";
+import CarDetails from "./components/CarDetails";
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <CarList />
-    </div>
+    <Routes>
+      <Route path="/" element={<CarList />} />
+      <Route path="/car/:id" element={<CarDetails />} />
+    </Routes>
   );
-};
+}
 
 export default App;
