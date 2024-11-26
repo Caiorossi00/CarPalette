@@ -12,7 +12,7 @@
   width: 72%;
   align-self: center;
   margin: 0 auto;
-  margin-top: 5vh;
+  margin-top: 10vh;
   margin-bottom: 1vh;
 }
 
@@ -20,7 +20,6 @@
   font-size: 2.4em;
   width: 10px;
   margin: 0;
-  color: #f4b61e;
 }
 
 .car-details-home-button {
@@ -29,6 +28,13 @@
   padding: 10px;
   cursor: pointer;
   color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.car-details-home-button:hover {
+  background-color: #d5d5d5;
+  transform: scale(1.1);
+  color: black;
 }
 
 .car-details-home-button .material-icons {
@@ -48,6 +54,12 @@
   width: 100%;
   border-radius: 40px;
   border: 1px solid rgb(149, 149, 149);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-details-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .car-details-info {
@@ -92,13 +104,19 @@
   object-fit: cover;
   border-radius: 40px;
   border: 2px solid rgb(149, 149, 149);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-detail-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .footer-details {
   align-items: left;
   display: flex;
   flex-direction: row;
-  margin: 10vh 0;
+  margin: 20vh 0;
   position: relative;
   align-items: end;
   justify-content: space-between;
@@ -113,20 +131,64 @@
 
 .credits-banner {
   padding: 1em;
+  text-decoration: none;
 }
 
 .logo-banner {
   height: 250px;
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-banner:hover {
+  transform: scale(1.09);
 }
 
 .text-banner {
   font-size: 1rem;
   color: #383838;
-  font-family: "Poppins", sans-serif;
 }
 
 .caiorossidev {
   font-weight: bold;
   cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .car-details-name {
+    font-size: 2.8em;
+  }
+
+  .car-details-image {
+    height: 53vh;
+  }
+
+  .car-details-cv,
+  .car-details-max-speed,
+  .car-details-zero-cem {
+    font-size: 2em;
+    margin-top: 20px;
+  }
+
+  .car-detail-image {
+    width: 500px;
+    height: 168px;
+  }
+
+  .car-details-banner {
+    width: 1200px;
+    max-height: 500px;
+  }
+
+  .text-banner {
+    font-size: 1.2rem;
+  }
+
+  .logo-banner {
+    height: 300px;
+  }
+
+  .footer-details {
+    margin: 15vh 0;
+  }
 }

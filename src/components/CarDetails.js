@@ -18,7 +18,7 @@ const CarDetails = () => {
         <h1 className="car-details-name">{car.name}</h1>
         <Link to="/">
           <button className="car-details-home-button">
-            <span className="material-icons">Home</span>
+            <span className="material-icons">← Go Back </span>
           </button>
         </Link>
       </div>
@@ -69,16 +69,17 @@ const CarDetails = () => {
           src={car.detailsFotos[4]}
           alt="Car Banner"
         />
-        <div className="credits-banner">
-          <img
-            className="logo-banner"
-            src={logo}
-            alt="Logo Caiorossi.dev"
-          ></img>
+        <a
+          className="credits-banner"
+          href="https://www.instagram.com/caiorossi.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img className="logo-banner" src={logo} alt="Logo Caiorossi.dev" />
           <p className="text-banner">
             Developed by <span className="caiorossidev">@Caiorossi.dev</span>
           </p>
-        </div>
+        </a>
       </div>
     </div>
   );
